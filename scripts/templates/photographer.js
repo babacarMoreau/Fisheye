@@ -12,7 +12,7 @@ function photographerTemplate(data) {
 
         const link = document.createElement('a');
         link.setAttribute("aria-label", name);
-        link.href = "./photographer.html";
+        link.href = "./photographer.html?id=" + id;
         link.style.textDecoration = 'none';
 
         link.style.display = 'flex';
