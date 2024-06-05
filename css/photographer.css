@@ -6,6 +6,60 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+#picture_photograph img{
+
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.namePhotograph {
+
+    color: #D3573C;
+    font-family: "DM Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-bottom: 0;
+}
+
+.cityPhotograph {
+
+    color: #901C1C;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-top:0;
+    margin-bottom: 0;
+
+}
+
+.taglinePhotograph {
+
+    display:flex;
+    justify-content: flex-start;
+
+}
+
+.media-photograph {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px;
+
 }
 
 .contact_button {

@@ -1,10 +1,11 @@
-//Mettre le code JavaScript lié à la page photographer.html
 
+//récupération de l'id du photographe dans l'url du site
 let params = new URL(document.location).searchParams;
 
 let id = params.get('id');
 
 
+//Récupere le photographe par rapport a son id
 async function getPhotographers() {
     
     const reponse = await fetch("data/photographers.json");
@@ -18,7 +19,17 @@ async function getPhotographers() {
 
 }
 
+// Ajoute les informations du photographe dans le header de la page web
+async function addInfosPhotograph (){
 
+    const photographer = await getPhotographers();
+    const photographerModel = photographerTemplate(photographer);
+    photographerModel.getInfosPhotograph();
+
+}
+
+
+addInfosPhotograph();
  
 
 
