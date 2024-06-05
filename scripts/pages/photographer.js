@@ -48,7 +48,19 @@ async function displayMedia(){
         const media = await getMedia();
 
 
-        media.forEach(media => {
+        for (const elementMedia of media) {
+
+            if(elementMedia.photographerId == id){
+                
+                const element = mediaTemplate(elementMedia);
+                
+                mediaPhotograph.appendChild(element);
+            }
+
+        }
+
+
+        /*media.forEach(media => {
 
            
             
@@ -56,13 +68,12 @@ async function displayMedia(){
 
                 const element = mediaTemplate(media);
                 
-
-
+            
                 mediaPhotograph.appendChild(element);
 
             }
 
-        });
+        }); */
 
 }
 
