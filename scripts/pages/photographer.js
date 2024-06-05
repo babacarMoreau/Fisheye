@@ -28,8 +28,47 @@ async function addInfosPhotograph (){
 
 }
 
+async function getMedia() {
+
+    const reponse = await fetch("data/photographers.json");
+
+    const photographerAndMedia = await reponse.json();
+
+    const media = photographerAndMedia.media;
+
+    return media;
+
+}
+
+
+async function displayMedia(){
+
+        const mediaPhotograph = document.querySelector('.media-photograh');
+
+        const media = await getMedia();
+
+
+        media.forEach(media => {
+
+           
+            
+            if(media.photographerId == id){
+
+                const element = mediaTemplate(media);
+                
+
+
+                mediaPhotograph.appendChild(element);
+
+            }
+
+        });
+
+}
+
 
 addInfosPhotograph();
+displayMedia();
  
 
 
